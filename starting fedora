@@ -1,0 +1,32 @@
+
+Non-free:
+	dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+	dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
+dnf:
+	clipit htop meld anki git lyx (chromium) tweaks (qemu virt-manager) eclipse snapd vlc i3 timeshift thunderbird dconf-editor
+	
+multimedia codecs:
+	dnf -y install gstreamer1-plugins-base gstreamer1-plugins-good gstreamer1-plugins-ugly gstreamer1-plugins-bad-free gstreamer1-plugins-bad-freeworld gstreamer1-plugins-bad-free-extras
+
+snap:
+	sublime pycharm android-studio spotify
+
+Gnome-extensions:
+	"topIcons plus" "dash to panel"
+
+configurations:
+	clipit: check: "use primary" "automatically paste selected items"
+		uncheck: "use copy" "synchronize clipboards" "save URLs" "capture hyperlinks only" "use right click menu"
+			(in History:) "show in reverse order" "purge history after timeout"
+	add online accounts
+	Gnome-tweaks: appearance, color theme, touchpad & mouse, startup applications	
+	language + shortcuts
+	Terminal: set Ctrl+V to paste, Colors, Fonts, New terminal name
+	Thunderbird: rtl language add-on (BiDi mail UI)
+	Firefox: tab session manager, adBlocker
+
+	add the files: .inputrc (to define default behavior), .bash_aliases, .bashrc, .vimrc, etc.
+
+	dconf editor: in org -> gnome -> shell -> app-switcher change "current-workspace-only" to true
+	
