@@ -1,0 +1,27 @@
+$include /etc/inputrc
+
+# for full information- check section "READLINE" in "info bash"
+# Guide: check "showkey --ascii" for special characters
+
+# mappings Alt-left-arrow and Alt-right-arrow for word moving
+"\e[1;3C": forward-word
+"\e[1;3D": backward-word
+
+# mapping Ctrl-left-arrow and Ctrl-right-arrow for word moving 
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
+
+# Alt-Delete: delete next word
+"\e[3;3~": shell-kill-word
+
+# auto-complete configurations
+set completion-ignore-case On
+set colored-stats On
+set show-all-if-ambiguous On
+
+# hide ctrl-c ("^C") after hitting ctrl-c
+set echo-control-characters Off
+
+# Key bindings, up/down arrow searches through history
+"\e[A": history-search-backward
+"\e[B": history-search-forward
