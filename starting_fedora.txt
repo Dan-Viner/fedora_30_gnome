@@ -13,7 +13,7 @@ snap:
 	sublime pycharm android-studio spotify
 
 Gnome-extensions:
-	"topIcons plus" "dash to panel"
+	"topIcons plus" "dash to panel" "system monitor"
 
 configurations:
 	clipit: check: "use primary" "automatically paste selected items"
