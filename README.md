@@ -58,7 +58,8 @@ a new Fedora 30 WS initialization notes and files.
 	in Firefox: serach the web to fing how to scale the entire app: https://support.mozilla.org/en-US/questions/1239467.
 	there is also a new experimental feature in gnome that allows fractional scaling even for x-severs (gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"). see here: https://www.linuxuprising.com/2019/04/how-to-enable-hidpi-fractional-scaling.html
 
-*virtual machine (KVM):* see instructions here: https://computingforgeeks.com/how-to-install-kvm-on-fedora/.
+*virtual machine (KVM):* I used these instructions: https://computingforgeeks.com/how-to-install-kvm-on-fedora/. but this looks simpler and mybe worth a shot: https://www.youtube.com/watch?v=IqB8zJ9aTWA.
 	included packages: bridge-utils libvirt virt-install qemu-kvm (Install KVM / QEMU on Fedora 30), virt-top libguestfs-tools (virtual machine management), virt-manager (Virtual machine Manager GUI).
+	how to initiate a KVM: https://www.linux.com/tutorials/creating-virtual-machines-kvm-part-1/
 	for testing see: https://computingforgeeks.com/how-to-create-and-configure-bridge-networking-for-kvm-in-linux/.
 	for video instructions: https://www.youtube.com/watch?v=IqB8zJ9aTWA
