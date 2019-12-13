@@ -12,7 +12,7 @@ a new Fedora 30 WS initialization notes and files.
 	sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 ### install some important apps
-	sudo dnf install clipit htop meld anki git lyx (chromium) tweaks (qemu virt-manager) eclipse snapd vlc i3 timeshift thunderbird dconf-editor
+	sudo dnf install clipit htop meld anki git lyx (chromium) gnome-tweak-tool (qemu virt-manager) eclipse snapd vlc i3 timeshift thunderbird dconf-editor
 	
 
 ### adding multimedia codecs:
