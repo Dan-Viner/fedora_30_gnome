@@ -1,0 +1,57 @@
+1. Clipboard:
+
+clipit:
+	install: sudo dnf install clipit
+	issues: There are two common issues: 1. it works only for Xorg based desktops. 2. it has a poor support in many distributions.
+	solutions: 1. to solve the first issue- in GNOME desktop you can sometimes switch for Xorg based GNOME in the LogOut manue.
+		2. to solve the second issue- it sometimes help to install the following GNOME extensions: "dash to panel" (to control what will be shown in the top panel) "topicons plus" (to display legacy icons)
+	configurations: check- "use primary" "automatically paste selected items"
+		uncheck- "use copy" "synchronize clipboards" "save URLs" "capture hyperlinks only" "use right click menu"
+			(in History:) "show in reverse order" "purge history after timeout"
+
+gpaste:
+	install: sudo dnf install gpaste gpaste-ui gnome-shell-extension-gpaste
+	Note: after installation LogOut and back in, then configure the extension behavior, and then LogOut and LogIn again.
+	issues: there is no automatic pasting, so, after selection from clipboard you'll still have to hit Ctrl+V to paste
+	further reading: https://github.com/Keruspe/GPaste/issues/119
+
+
+2. Gnome tweak-tool:
+	install: sudo dnf install gnome-tweak-tool
+	extensions: system-monitor, Dash to panel, User themes, Places status indicator, GPaste
+
+
+3. Firefox:
+	extensions: tab session manager, adBlocker
+
+
+4. Dconf editor:
+	install: sudo dnf install dconf-editor
+	switch apps only in current workspace: in org -> gnome -> shell -> app-switcher change "current-workspace-only" to true
+
+
+5. Timeshift:
+	install: sudo dnf install timeshift
+	instructions: https://www.youtube.com/watch?v=OMiCcFy4oGM
+	Note: in the video he claims that there is an issue with timeshift and SELinux, but I've tried it on Fedora31 with SELinux enabled (you can check with sestatus) and it worked fine, so I guess they fixed the problem in the meantime.
+
+
+6. KVM:
+	installation instructions: https://docs.fedoraproject.org/en-US/quick-docs/getting-started-with-virtualization/
+	creating new VM: https://www.linux.com/tutorials/creating-virtual-machines-kvm-part-1/
+	video instructions: https://www.youtube.com/watch?v=IqB8zJ9aTWA
+
+
+Some legacy instructions from the README.md file:
+
+*add online accounts*
+
+*language:*
+	add language & shortcuts for switching layouts.
+	The default encoding of "UTF-8" is suppose to work fine, but for documents that were written on Windows - the encoding will be "Windows-1253", so you'll have to first convert it to the right encoding: "iconv -f Windows-1253 -t UTF-8 input.txt > output.txt"
+	I chnaged the default font in Gedit to "aleph regular", and if open a file through the app (and not by double-click on the file)- you can also choose a specific encoding and see which encodings are available for Hebrew. (you can change the default encoding for Gedit by adding it to the top of the list in dconf: org -> gnome -> gedit -> preferences -> encodings)
+	There is still the issue of rtl + ltr combined view that I don't know how to solve yet
+
+*Scaling:* cahnge the scaling factor in gnome tweaks, and then change the inner fonts in each app.
+	in Firefox: serach the web to fing how to scale the entire app: https://support.mozilla.org/en-US/questions/1239467.
+	there is also a new experimental feature in gnome that allows fractional scaling even for x-severs (gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"). see here: https://www.linuxuprising.com/2019/04/how-to-enable-hidpi-fractional-scaling.html
