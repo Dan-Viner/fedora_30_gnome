@@ -41,6 +41,9 @@ gpaste:
 	creating new VM: https://www.linux.com/tutorials/creating-virtual-machines-kvm-part-1/
 	video instructions: https://www.youtube.com/watch?v=IqB8zJ9aTWA
 
+7. tlp:
+	change SOUND_POWER_SAVE_ON_BAT to 0 to avoid bad sound on apps.
+
 
 Some legacy instructions from the README.md file:
 
